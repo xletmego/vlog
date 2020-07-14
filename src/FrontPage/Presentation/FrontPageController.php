@@ -15,8 +15,7 @@ final class FrontPageController{
     }
 
     public function show(Request $request): Response{
-
-        $content = 'Hi,' . $request->get('name', 'UserName');
+        $content = $this->templateRenderer->render('FrontPage.html.twig');
         return new Response($content);
     }
 }
