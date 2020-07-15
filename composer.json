@@ -5,11 +5,13 @@
     "symfony/http-foundation": "^5.1",
     "nikic/fast-route": "^1.3",
     "twig/twig": "^3.0",
-    "rdlowrey/auryn": "^1.4"
+    "rdlowrey/auryn": "^1.4",
+    "doctrine/dbal": "^2.10"
   },
   "autoload": {
     "psr-4": {
-      "Vlog\\": "src/"
+      "Vlog\\": "src/",
+      "Migrations\\": "migrations"
     }
   }
 }
