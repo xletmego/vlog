@@ -6,14 +6,14 @@ use Vlog\Framework\Rendering\TemplateRenderer;
 use Vlog\Framework\Rendering\TwigTemplateRendererFactory;
 use Vlog\Framework\Rendering\TemplateDirectory;
 use Vlog\FrontPage\Application\SubmissionsQuery;
-use Vlog\FrontPage\Infrastructure\MockSubmissionsQuery;
+use Vlog\FrontPage\Infrastructure\DbalSubmissionsQuery;
 use Vlog\Framework\Dbal\DatabaseUrl;
 use Vlog\Framework\Dbal\ConnectionFactory;
 use Doctrine\DBAL\Connection;
 
 $injector = new Injector();
 
-$injector->alias(SubmissionsQuery::class, MockSubmissionsQuery::class);
+$injector->alias(SubmissionsQuery::class, DbalSubmissionsQuery::class);
 $injector->share(SubmissionsQuery::class);
 
 $templateDirectory = $injector->make(TemplateDirectory::class,[':rootDirectory' => ROOT_DIR]);
