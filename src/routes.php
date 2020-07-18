@@ -10,4 +10,9 @@ return [
         '/submit',
         'Vlog\Submission\Presentation\SubmissionController#show'
     ],
+    [
+        'POST',
+        '/submit',
+        'Vlog\Submission\Presentation\SubmissionController#submit'
+    ]
 ];

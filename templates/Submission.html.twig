@@ -1,0 +1,21 @@
+{% extends 'Layout.html.twig' %}
+
+{% block content %}
+
+    <form method="post" action="">
+
+        <div>
+            <label for="submission-title">Title</label>
+            <input type="text" name="title" id="submission-title">
+        </div>
+        <div>
+            <label for="submission-url">URL</label>
+            <input type="url" name="url" id="submission-url"><br>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+{% endblock %}
